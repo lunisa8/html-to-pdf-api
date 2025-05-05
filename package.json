@@ -1,14 +1,13 @@
 {
   "name": "html-to-pdf-api",
   "version": "1.0.0",
-  "description": "Convertidor de HTML a PDF con Puppeteer",
+  "description": "Microservicio para convertir HTML en PDF usando Puppeteer",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "puppeteer": "^20.8.1",
-    "body-parser": "^1.20.2"
+    "express": "^4.18.4",
+    "puppeteer": "^22.8.2"
   }
 }
