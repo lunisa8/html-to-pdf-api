@@ -1,6 +1,6 @@
 FROM node:20-slim
 
-# Instala dependencias del sistema necesarias para Puppeteer
+# Instala todas las dependencias necesarias para que Chromium funcione
 RUN apt-get update && apt-get install -y \
   wget \
   ca-certificates \
@@ -18,6 +18,17 @@ RUN apt-get update && apt-get install -y \
   libxcomposite1 \
   libxdamage1 \
   libxrandr2 \
+  libxss1 \
+  libxtst6 \
+  libxshmfence1 \
+  libxext6 \
+  libxfixes3 \
+  libglib2.0-0 \
+  libexpat1 \
+  libu2f-udev \
+  libpci3 \
+  libdrm2 \
+  libgbm1 \
   xdg-utils \
   --no-install-recommends && \
   apt-get clean && \
@@ -30,4 +41,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
